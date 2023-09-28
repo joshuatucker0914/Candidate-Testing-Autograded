@@ -38,7 +38,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   for(let i = 0; i < candidateAnswers.length; i++){
-    if(i === correctAnswers){
+    if(i == correctAnswers){
       console.log(`${candidateAnswers} is correct!`);
     }
   else{
@@ -46,10 +46,46 @@ function gradeQuiz(candidateAnswers) {
   }
 }
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
+  if(candidateAnswers[0] == correctAnswers[0] || candidateAnswers[0] == "sally ride"){
+    console.log("Correct!")
+    grade = grade + 1
+    }
+    else {
+    console.log("Incorrect!");
+    }
+    if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1] == "TRUE"){
+    console.log("Correct!")
+    grade = grade + 1
+    }
+    else {
+    
+    console.log("Incorrect!");
+    }
+    if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] == "40"){
+    console.log("Correct!")
+    grade = grade + 1
+    }
+    else {
+    console.log("Incorrect!");
+    }
+    if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3] == "TrAjEcToRy"){
+    console.log("Correct!")
+    grade = grade + 1
+    }
+    else {
+    console.log("Incorrect!");
+    }
+    if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] == "3"){
+    console.log("Correct!")
+    grade = grade + 1
+    }
+    else {
+    console.log("Incorrect!");
+    }
+    
 
-
-  return grade;
+  return grade / 5 * 100;
 }
 
 function runProgram() {
