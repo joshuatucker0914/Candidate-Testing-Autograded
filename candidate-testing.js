@@ -29,7 +29,7 @@ userName = input.question("What is your name?");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 for(let i = 0; i < questions.length; i++){
-  let addedAnswer = candidateAnswers.push(input.question(`${questions[i]}`));
+  let addedAnswer = candidateAnswers.push(input.question(`${questions[i]}`).toLowerCase());
 }
 }
 
@@ -43,26 +43,26 @@ function gradeQuiz(candidateAnswers) {
 }
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
-  if(candidateAnswers[0] == correctAnswers[0] || candidateAnswers[0] == "sally ride"){
+  if(candidateAnswers[0] === correctAnswers[0] || candidateAnswers[0] == "sally ride" ||candidateAnswers[0] === correctAnswers[0].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
    
-    if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1] == "TRUE"){
+    if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1] == "TRUE" || candidateAnswers[1] === correctAnswers[1].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
 
-    if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] == "40"){
+    if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] == "40" || candidateAnswers[2] === correctAnswers[2].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
 
-    if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3] == "TrAjEcToRy"){
+    if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3] == "TrAjEcToRy" || candidateAnswers[3] === correctAnswers[3].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
-    if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] == "3"){
+    if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] == "3" || candidateAnswers[4] === correctAnswers[4].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
