@@ -69,7 +69,7 @@ function gradeQuiz(candidateAnswers) {
     else {
     console.log("Incorrect!");
     }
-    
+    console.log(`Your grade is ${grade / 5 * 100}`);
 
   return grade / 5 * 100;
 }
