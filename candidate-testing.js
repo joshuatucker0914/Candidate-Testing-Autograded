@@ -34,47 +34,24 @@ for(let i = 0; i < questions.length; i++){
 }
 
 function gradeQuiz(candidateAnswers) {
+  let grade = 0;
+  for (let i = 0; i < questions.length; i++) {
+    console.log(`Question ${i + 1}: ${questions[i]}`);
+    console.log(`Your Answer: ${candidateAnswers[i]}`);
+    console.log(`Correct Answer: ${correctAnswers[i]}`);
 
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  for(let i = 0; i < candidateAnswers.length; i++){
-    if(i == correctAnswers[i]){
-      console.log(`${candidateAnswers} is correct!`);
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      console.log("You answered correctly!\n");
+      grade++;
+    } else {
+      console.log("You answered incorrectly.\n");
     }
-    else{
-      console.log("Incorrect!")
-    }
-}
+  }
 
-  let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
-  if(candidateAnswers[0] === correctAnswers[0] || candidateAnswers[0] === correctAnswers[0].toLowerCase()){
-    console.log("Correct!")
-    grade = grade + 1
-    }
-   
-    if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1].toLowerCase() === correctAnswers[1].toLowerCase()){
-    console.log("Correct!")
-    grade = grade + 1
-    }
-
-    if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] === correctAnswers[2].toLowerCase()){
-    console.log("Correct!")
-    grade = grade + 1
-    }
-
-    if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3].toLowerCase() === correctAnswers[3].toLowerCase()){
-    console.log("Correct!")
-    grade = grade + 1
-    }
-    if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] === correctAnswers[4].toLowerCase()){
-    console.log("Correct!")
-    grade = grade + 1
-    }
-    else {
-    console.log("Incorrect!");
-    }
-    console.log(`Your grade is ${grade / 5 * 100}`);
-    
-  return grade / 5 * 100;
+  const finalGrade = (grade / questions.length) * 100;
+  console.log(`Final Grade: ${finalGrade}% (${grade} out of ${questions.length} correct)`);
+  
+  return finalGrade;
 }
 
 function runProgram() {
