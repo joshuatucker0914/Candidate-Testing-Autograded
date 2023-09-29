@@ -43,26 +43,26 @@ function gradeQuiz(candidateAnswers) {
 }
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
-  if(candidateAnswers[0] === correctAnswers[0] || candidateAnswers[0] == "sally ride" ||candidateAnswers[0] === correctAnswers[0].toLowerCase()){
+  if(candidateAnswers[0] === correctAnswers[0] || candidateAnswers[0] === correctAnswers[0].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
    
-    if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1] == "TRUE" || candidateAnswers[1] === correctAnswers[1].toLowerCase()){
+    if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1].toLowerCase() === correctAnswers[1].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
 
-    if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] == "40" || candidateAnswers[2] === correctAnswers[2].toLowerCase()){
+    if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] === correctAnswers[2].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
 
-    if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3] == "TrAjEcToRy" || candidateAnswers[3] === correctAnswers[3].toLowerCase()){
+    if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3].toLowerCase() === correctAnswers[3].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
-    if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] == "3" || candidateAnswers[4] === correctAnswers[4].toLowerCase()){
+    if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] === correctAnswers[4].toLowerCase()){
     console.log("Correct!")
     grade = grade + 1
     }
