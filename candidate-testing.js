@@ -9,7 +9,6 @@ let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
-
 //TODO: Variables for Part 2
 let questions = [
 "Who was the first American woman in space? ",
@@ -30,7 +29,7 @@ userName = input.question("What is your name?");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 for(let i = 0; i < questions.length; i++){
-  candidateAnswer = input.question(`${questions[i]}`);
+  let addedAnswer = candidateAnswers.push(input.question(`${questions[i]}`));
 }
 }
 
@@ -41,9 +40,6 @@ function gradeQuiz(candidateAnswers) {
     if(i == correctAnswers){
       console.log(`${candidateAnswers} is correct!`);
     }
-  else{
-    console.log(`${candidateAnswers} is incorrect!`);
-  }
 }
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
@@ -51,30 +47,20 @@ function gradeQuiz(candidateAnswers) {
     console.log("Correct!")
     grade = grade + 1
     }
-    else {
-    console.log("Incorrect!");
-    }
+   
     if(candidateAnswers[1] == correctAnswers[1] || candidateAnswers[1] == "TRUE"){
     console.log("Correct!")
     grade = grade + 1
     }
-    else {
-    
-    console.log("Incorrect!");
-    }
+
     if(candidateAnswers[2] == correctAnswers[2] || candidateAnswers[2] == "40"){
     console.log("Correct!")
     grade = grade + 1
     }
-    else {
-    console.log("Incorrect!");
-    }
+
     if(candidateAnswers[3] == correctAnswers[3] || candidateAnswers[3] == "TrAjEcToRy"){
     console.log("Correct!")
     grade = grade + 1
-    }
-    else {
-    console.log("Incorrect!");
     }
     if(candidateAnswers[4] == correctAnswers[4] || candidateAnswers[4] == "3"){
     console.log("Correct!")
