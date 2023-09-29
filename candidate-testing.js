@@ -37,8 +37,11 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   for(let i = 0; i < candidateAnswers.length; i++){
-    if(i == correctAnswers){
+    if(i == correctAnswers[i]){
       console.log(`${candidateAnswers} is correct!`);
+    }
+    else{
+      console.log("Incorrect!")
     }
 }
 
@@ -70,7 +73,7 @@ function gradeQuiz(candidateAnswers) {
     console.log("Incorrect!");
     }
     console.log(`Your grade is ${grade / 5 * 100}`);
-
+    
   return grade / 5 * 100;
 }
 
